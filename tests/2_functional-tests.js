@@ -40,7 +40,7 @@ suite('Functional Tests', function() {
         .end(function(err, res) {
           assert.equal(res.status, 200);
           assert.equal(res.type, 'application/json')
-          assert.equal(res.body.name, 'Cristofo');
+          assert.equal(res.body.name, 'Cristoforo');
           assert.equal(res.body.surname, 'Colombo');
           done();
         });
@@ -85,7 +85,7 @@ suite('Functional Tests with Zombie.js', function() {
       browser.fill('surname', 'Colombo').then(() => {
         browser.pressButton('submit', () => {
           browser.assert.success();
-          browser.assert.text('span#name', 'Cristofo');
+          browser.assert.text('span#name', 'Cristoforo');
           browser.assert.text('span#surname', 'Colombo');
           browser.assert.elements('span#dates', 1);
           done();
