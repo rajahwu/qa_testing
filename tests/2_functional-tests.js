@@ -47,7 +47,10 @@ suite('Functional Tests', function () {
         .request(server)
         .put('/travellers')
         .send({ surname: "de Verrazzano" })
-      done();
+        .end((err, res) => {
+
+          done();
+        })
     });
   });
 });
